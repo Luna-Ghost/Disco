@@ -1,5 +1,5 @@
 function cuadros(){
-   return Math.round(Math.random() *10);
+    return Math.round(Math.random() * 3) + 1;
 } 
 let secuencia = [];
 for(i=1; i<6; i++)
@@ -11,6 +11,7 @@ for(i=1; i<6; i++)
        secuencia.push("cuadro"+sacar_sec);
     }else if(sacar_sec>4)
     {
+        let util = Math.round
         sacar_sec = 4;
         console.log("cuadro"+sacar_sec);
         secuencia.push("cuadro"+sacar_sec);
