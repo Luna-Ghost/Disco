@@ -3,12 +3,6 @@
     src: url('./statics/DiscoDiva.ttf');
 }
 
-#ini{
-    font-family: 'Disco';
-    position: absolute;
-    bottom: 32%;
-    left: 30%;
-}
 body{
     background: rgb(83,83,83);
     background: radial-gradient(circle, rgba(83,83,83,1) 0%, rgba(0,0,0,1) 100%);
@@ -45,6 +39,30 @@ div{
     cursor: pointer;
     width: 120px;
     height: 120px;
+}
+#boton{
+    background-color: #16b900;
+    text-align: center;
+    border-radius: 40% 0 40% 0;
+    width: 100px;
+    height: 50px;
+    font-family: fantasy;
+}
+#button{
+    position: relative;
+    left: 46%;
+    top: 50px;
+}
+#boton:hover{
+    background-color: #00b670;
+    position: relative;
+    left: 10px;
+    top: 13px;
+    text-align: center;
+    border-radius: 40% 0 40% 0;
+    width: 80px;
+    height: 30px;
+    font-family: fantasy;
 }
 #mayor{
     width: 280px;

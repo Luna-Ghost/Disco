@@ -1,4 +1,29 @@
-function aleatorio() {
+function cuadros(){
+   return Math.round(Math.random() *10);
+} 
+let secuencia = [];
+for(i=1; i<6; i++)
+{
+    let sacar_sec = cuadros();
+    if(sacar_sec<=4 && sacar_sec>=1)
+    {
+       console.log("cuadro"+sacar_sec);
+       secuencia.push("cuadro"+sacar_sec);
+    }else if(sacar_sec>4)
+    {
+        sacar_sec = 4;
+        console.log("cuadro"+sacar_sec);
+        secuencia.push("cuadro"+sacar_sec);
+    }else if(sacar_sec<1)
+    {
+        sacar_sec = 1;
+        console.log("cuadro"+sacar_sec);
+        secuencia.push("cuadro"+sacar_sec);
+    }
+}
+console.log(secuencia);
+
+/*function aleatorio() {
     return Math.round(Math.random() * 3) + 1;
 } 
 
@@ -27,4 +52,4 @@ window.addEventListener('load', ()=>{
             }
         )
     })
-})
+})*/
