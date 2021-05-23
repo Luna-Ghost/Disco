@@ -54,7 +54,6 @@ function cuadros(){
                     case "cuadro1":
                         console.log("soy uno");
                         c1.style.backgroundColor= "#ff3a96";
-                        c1.style.backgroundColor= "#FF38E1";
                         break;
                     case "cuadro2": 
                         console.log("soy dos");
