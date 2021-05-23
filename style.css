@@ -3,6 +3,12 @@
     src: url('./statics/DiscoDiva.ttf');
 }
 
+#ini{
+    font-family: 'Disco';
+    position: absolute;
+    bottom: 32%;
+    left: 30%;
+}
 body{
     background: rgb(83,83,83);
     background: radial-gradient(circle, rgba(83,83,83,1) 0%, rgba(0,0,0,1) 100%);
