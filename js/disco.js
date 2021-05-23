@@ -1,6 +1,53 @@
 function cuadros(){
 return Math.round(Math.random() * 3) + 1;
 } 
+
+function cambia(numero= 0)
+{
+    switch (numero)
+    {
+        case "cuadro1":
+            console.log("soy uno");
+            const c1 = document.getElementById('cuadro1');
+            setTimeout(()=>{
+                c1.style.backgroundColor= "#ff3a96";
+            }, 1000)
+            setTimeout(()=>{
+                c1.style.backgroundColor= "#FF38E1";
+            }, 1500)
+            break;
+        case "cuadro2": 
+            console.log("soy dos");
+            const c2 = document.getElementById('cuadro2');
+            setTimeout(()=>{
+            c2.style.backgroundColor="#3f31ff";
+            },1000)
+            setTimeout(()=>{
+                c2.style.backgroundColor="#319FFF";
+            },1500)
+            break;
+        case "cuadro3":
+            console.log("soy tres");
+            const c3 = document.getElementById('cuadro3');
+            setTimeout(()=>{
+            c3.style.backgroundColor="#fa7900";
+            },1000)
+            setTimeout(()=>{
+                c3.style.backgroundColor="#FA9A00";
+            },1500)
+            break;
+        case "cuadro4":
+            console.log("soy cuatro");
+            const c4 = document.getElementById('cuadro4');
+            setTimeout(()=>{
+                c4.style.backgroundColor="#0f9103";
+            }, 1000)
+            setTimeout(()=>{
+                c4.style.backgroundColor="#3EFF00";
+            }, 1500)
+            break;
+    }
+}
 let secuencia = [];
 for(i=1; i<6; i++)
 {
@@ -106,7 +153,6 @@ function ganadora(longitud, sec_usuario, ganar)
     }
 }
 
-<<<<<<< HEAD
 window.addEventListener('load', ()=>{
     const inicio = document.getElementById('boton');
     new Promise((resolve,reject)=> {
@@ -143,88 +189,39 @@ window.addEventListener('load', ()=>{
            })
        })
    }).then((secuencia)=>{
-       let i;
-       let s;
-           for(i=0; i<5; i++)
-           {
-               s= secuencia[i];
-               switch (s)
-               {
-                   case "cuadro1":
-                       console.log("soy uno");
-                       const c1 = document.getElementById('cuadro1');
-                       setTimeout(()=>{
-                            c1.style.backgroundColor= "#ff3a96";
-                       }, 1000)
-                       setTimeout(()=>{
-                            c1.style.backgroundColor= "#FF38E1";
-                       }, 1500)
-                       break;
-                   case "cuadro2": 
-                       console.log("soy dos");
-                       const c2 = document.getElementById('cuadro2');
-                       setTimeout(()=>{
-                       c2.style.backgroundColor="#3f31ff";
-                       },2000)
-                       setTimeout(()=>{
-                            c2.style.backgroundColor="#319FFF";
-                        },2500)
-                       break;
-                   case "cuadro3":
-                       console.log("soy tres");
-                       const c3 = document.getElementById('cuadro3');
-                       setTimeout(()=>{
-                       c3.style.backgroundColor="#fa7900";
-                       },3000)
-                       setTimeout(()=>{
-                            c3.style.backgroundColor="#FA9A00";
-                       },3500)
-                       break;
-                   case "cuadro4":
-                       console.log("soy cuatro");
-                       const c4 = document.getElementById('cuadro4');
-                       setTimeout(()=>{
-                            c4.style.backgroundColor="#0f9103";
-                       }, 4000)
-                       setTimeout(()=>{
-                            c4.style.backgroundColor="#3EFF00";
-                        }, 4500)
-                       break;
-               }
-           }
+            return new Promise((resolve)=>{
+                let l= secuencia[0];
+                cambia(l);
+                resolve(secuencia);
+            })
+        }).then((secuencia)=>{
+            return new Promise((resolve)=>{
+                let m= secuencia[1]
+                setTimeout(()=>{
+                    cambia(m);
+                },1000)
+                resolve(secuencia);
+            })
+        }).then((secuencia)=>{
+            return new Promise((resolve)=>{
+                let n= secuencia[2]
+                setTimeout(()=>{
+                    cambia(n);
+                }, 2000)
+                resolve(secuencia);
+            })
+        }).then((secuencia)=>{
+            return new Promise((resolve)=>{
+                let o= secuencia[3];
+                setTimeout(()=>{
+                    cambia(o);
+                }, 3000)
+                resolve(secuencia);
+            })
+        }).then((secuencia)=>{
+            let p= secuencia[4];
+            setTimeout(()=>{
+                cambia(p);
+            }, 4000)
         })
 })
-=======
-
-
-    /*function aleatorio() {
-        return Math.round(Math.random() * 3) + 1;
-    } 
-
-    window.addEventListener('load', ()=>{
-
-        const inicio = document.getElementById('ini');
-        const c1 = document.getElementById('caudro1');
-        const c2 = document.getElementById('cuadro2');
-        const c3 = document.getElementById('cuadro3');
-        const c4 = document.getElementById('cuadro4');
-
-        new Promise((resolve,reject)=> {
-            inicio.addEventListener("click", ()=>{
-                console.log("hola");
-                resolve();
-            })
-        }).then(()=>{
-            return new Promise(
-                (resolve)=>
-                {
-                    setTimeout(()=>{
-                        let p1=aleatorio();
-                        console.log(p1);
-                        resolve(p1)
-                    }, 600)
-                }
-            )
-        })
-    })*/
->>>>>>> 419eda67ed75a29595164c30695fa9587e5b2bd0
